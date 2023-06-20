@@ -21,7 +21,7 @@ export const deleteComment = async (id: number) => {
 
   const url = `${BASE_URL}/comments/${id}`;
 
-  return axios.delete(url).then(res => res.data);
+  return fetch(url).then(res => res.json());
 };
 
 export const addComment = async (comment: string) => {

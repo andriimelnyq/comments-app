@@ -1,6 +1,8 @@
+import axios from 'axios';
+
 const BASE_URL = 'https://dummyjson.com';
 
-function wait(delay: number): Promise<void> {
+function wait(delay: number) {
   return new Promise(resolve => {
     setTimeout(resolve, delay);
   });
@@ -11,7 +13,7 @@ export const getComments = async () => {
 
   const url = `${BASE_URL}/comments`;
 
-  return fetch(url).then(res => res.json());
+  return axios.get(url).then(res => res.data);
 };
 
 export const deleteComment = async (id: number) => {
@@ -19,7 +21,7 @@ export const deleteComment = async (id: number) => {
 
   const url = `${BASE_URL}/comments/${id}`;
 
-  return fetch(url).then(res => res.json());
+  return axios.delete(url).then(res => res.data);
 };
 
 export const addComment = async (comment: string) => {
@@ -27,13 +29,11 @@ export const addComment = async (comment: string) => {
 
   const url = `${BASE_URL}/comments/add`;
 
-  return fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      body: comment,
-      postId: 3,
-      userId: 5,
-    }),
-  }).then(res => res.json());
+  const requestBody = {
+    body: comment,
+    postId: 3,
+    userId: 5,
+  };
+
+  return axios.post(url, requestBody).then(res => res.data);
 };

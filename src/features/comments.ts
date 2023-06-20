@@ -40,7 +40,7 @@ const commentsSlice = createSlice({
     });
 
     builder.addCase(init.rejected, (state) => {
-      return ({ ...state, error: ErrorText.LOAD_COMMENTs, loading: false });
+      return ({ ...state, error: ErrorText.LOAD_COMMENTS, loading: false });
     });
 
     builder.addCase(remove.pending, (state) => {

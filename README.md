@@ -1,9 +1,18 @@
-# React TypeScript Starter Pack
+# COMMENTS APP
+[DEMO](https://andriimelnyq.github.io/comments-app/)
 
-To use this template click `Use this template`
+This application shows a list of comments and allows users to interact with them. Users can add comments using a form and delete any comments. If a user types something in the comment area and reloads the page, the text will reappear since it is saved in local storage.
+(Pay attention: when a new comment is added, it is associated with postId: 3 and userId: 5).
 
-### Available Scripts
+### Used technologies
+- React, Typescript, Redux + Redux-Thunk (Redux Toolkit).
+- [REST API](https://dummyjson.com/docs/comments).
+- JS.
+- CSS + SCSS + BEM.
+- HTML.
+- MaterialUI.
+- ESLint.
+- Axios.
 
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+### Instructions
+For run it on your machine: just `fork` this repo. Then `clone` it to your computer and run `npm install` (npm i). After use `npm start`.

@@ -1,3 +1,9 @@
-.starter {
-  font-size: 18px;
+.app {
+  padding: 40px 0;
+  background: linear-gradient(to bottom right, blue, #ffc0cb);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }

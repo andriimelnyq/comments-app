@@ -24,7 +24,7 @@ export const App: React.FC = () => {
         <Typography variant="h2" align="center" color="primary">
           {comments.length === 0
             ? 'No comments yet'
-            : 'All comments'}
+            : 'Comments'}
         </Typography>
 
         <CommentsList />
